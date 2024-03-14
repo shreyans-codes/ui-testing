@@ -33,6 +33,7 @@ public class LoginTests {
         ExtentSparkReporter spark = new ExtentSparkReporter("src/test/java/Spark.html");
         extent = new ExtentReports();
         extent.attachReporter(spark);
+        WebDriverManager.chromedriver().setup();
     }
     public String performLogin(String username, String password) {
         // Navigate to the login page
